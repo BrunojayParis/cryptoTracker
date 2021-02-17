@@ -13,6 +13,7 @@ function App() {
 
   const [coins, setCoins] = useState([])
   const [state, setState] = useState('')
+  
   useEffect(() => {
     axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=ars&order=market_cap_desc&per_page=100&page=1&sparkline=false")
   .then(function (response) {
@@ -42,10 +43,15 @@ function App() {
       <h1>This is the new crypto tracker</h1>
       <form>
         <input type="text" onChange={searchHandler} />
-        <button>Get Coins</button>
       </form>
 
-      {filteredCoins.map(coins => <Coins key={coins.id} name= {coins.name} image={coins.image} symbol= {coins.symbol} price ={coins.current_price} />)}
+      {filteredCoins.map(coins =>
+         <Coins 
+         key={coins.id} 
+         name= {coins.name} 
+         image={coins.image} 
+         symbol= {coins.symbol} 
+         price ={coins.current_price} />)}
 
      
     </div>

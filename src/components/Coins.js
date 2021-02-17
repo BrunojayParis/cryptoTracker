@@ -6,15 +6,14 @@ const Coins = ({name, image, symbol, price}) =>{
 
 
     return(
-        <div className= "coinsConteiner">
-            <div className="coinsRow">
-                <div className="coins">
-                    <img src={image} alt=""/>
-                    <h1>{name}</h1>
-                    <p className="coinSymbol">{symbol}</p>
-                    <p className="coinPrice">{price}</p>
-
-                </div>
+        <div class="grid grid-cols-2 gap-2" >       
+            <div class="flex " >
+                <img class="h-8" src={image} alt=""/>
+                <h1>{name}</h1>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <p className="coinSymbol">{symbol}</p>
+                <p className="coinPrice">{price}</p>
             </div>
         </div>
         
