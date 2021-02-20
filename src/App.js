@@ -39,10 +39,10 @@ function App() {
 
 
   return (
-    <div className="coinsApp">
-      <h1>This is the new crypto tracker</h1>
-      <form>
-        <input type="text" onChange={searchHandler} />
+    <div>
+      <h1 class="text-4xl ">Crypto Tracker</h1>
+      <form class= "py-4">
+        <input class="border-2 border-black-200" type="text" onChange={searchHandler} label="search" />
       </form>
 
       {filteredCoins.map(coins =>
