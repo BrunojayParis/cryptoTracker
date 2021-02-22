@@ -23,7 +23,7 @@ function App() {
   })
   .catch(function (error) {
     // handle error
-    console.log(error);
+    document.alert(error);
   })
   },[]);
 
@@ -33,9 +33,6 @@ function App() {
   }
 
   const filteredCoins = coins.filter(coin=> coin.name.toLowerCase().includes(state.toLowerCase()))
-  
-  console.log(searchHandler)
-
 
 
   return (
@@ -51,7 +48,9 @@ function App() {
          name= {coins.name} 
          image={coins.image} 
          symbol= {coins.symbol} 
-         price ={coins.current_price} />)}
+         price ={coins.current_price}
+         volume= {coins.total_volume}
+         priceChange= {coins.price_change_24h} />)}
 
      
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Coins = ({name, image, symbol, price}) =>{
+const Coins = ({name, image, symbol, price, volume, priceChange}) =>{
 
 
 
@@ -14,6 +14,8 @@ const Coins = ({name, image, symbol, price}) =>{
             <div class="grid grid-cols-2 gap-4">
                 <p className="coinSymbol">{symbol}</p>
                 <p className="coinPrice">$ {price}</p>
+                <p>{volume}</p>
+                <p>{priceChange}</p>
             </div>
         </div>
         
