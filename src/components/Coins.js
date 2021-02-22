@@ -11,11 +11,11 @@ const Coins = ({name, image, symbol, price, volume, priceChange}) =>{
                 <img class="h-8" src={image} alt=""/>
                 <h1 class="px-2">{name}</h1>
             </div>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-4 gap-4">
                 <p className="coinSymbol">{symbol}</p>
                 <p className="coinPrice">$ {price}</p>
                 <p>{volume}</p>
-                <p>{priceChange}</p>
+                <p>{priceChange.toFixed(2)}%</p>
             </div>
         </div>
         

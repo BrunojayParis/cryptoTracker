@@ -41,6 +41,9 @@ function App() {
       <form class= "py-4">
         <input class="border-2 border-black-200" type="text" onChange={searchHandler} label="search" />
       </form>
+      <div class="grid gird-col-">
+
+      </div>
 
       {filteredCoins.map(coins =>
          <Coins 
@@ -50,7 +53,7 @@ function App() {
          symbol= {coins.symbol} 
          price ={coins.current_price}
          volume= {coins.total_volume}
-         priceChange= {coins.price_change_24h} />)}
+         priceChange= {coins.price_change_percentage_24h} />)}
 
      
     </div>
